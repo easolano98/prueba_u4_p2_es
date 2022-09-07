@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<form th:action="@{/ventas/insertar}" th:object="${venta}" th:method="POST">
+		<table>
+			<tr>
+				<td><label>cedula cliente:</label></td>
+				<td><input type="text" id="cedulaCliente" th:field="${venta.cedulaCliente}"></td>
+			</tr>
+			<tr>
+				<td><label>numero venta:</label></td>
+				<td><input type="text" id="numero" th:field="${venta.numero}"></td>
+			</tr>
+			
+		</table>
+		<input type="submit" value="Guardar">
+	</form>
+</body>
+
+</html>
